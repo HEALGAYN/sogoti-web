@@ -115,44 +115,15 @@
   </div>
 </section>
 
-<section class="sec alt">
+<section class="sec band diag-sec" id="diagnostico">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Cómo trabajamos</span>
-      <h2>Cambios en producción sin detener la planta.</h2>
-      <p>Cada cambio sigue el mismo flujo controlado, con aprobación conjunta y plan de reversa. Usted sabe qué se toca, cuándo y quién lo valida.</p>
+      <span class="eyebrow">Punto de partida</span>
+      <h2>Diagnóstico PI System: su arquitectura, de punta a punta.</h2>
+      <p>Revisamos cada capa de su plataforma, desde la fuente OT hasta la pantalla del operador, y le entregamos un plan priorizado para decidir dónde invertir primero.</p>
     </div>
-    <div class="method">
-      <div class="m-step"><code>RFC</code><h3>Solicitud de cambio</h3><p>Alcance, riesgo e impacto aprobados por su equipo y el nuestro.</p></div>
-      <div class="m-step"><code>DEV</code><h3>Desarrollo</h3><p>Trabajo por sprints con diseño de bajo nivel documentado.</p></div>
-      <div class="m-step"><code>QA</code><h3>Validación</h3><p>Checklist de pruebas y seguridad en un entorno separado.</p></div>
-      <div class="m-step"><code>PROD</code><h3>Despliegue</h3><p>Ventana acordada con operación y plan de reversa probado.</p></div>
-      <div class="m-step"><code>OPS</code><h3>Operación</h3><p>Monitoreo, incidentes con RCA y SLA reportado cada mes.</p></div>
-    </div>
-    <div class="frames"><span>Marcos de referencia</span><span class="frame">ITIL 4</span><span class="frame">COBIT 2019</span><span class="frame">PMBOK 7</span><span class="frame">ISA-101</span><span class="frame">ISO 27001</span><span class="frame">NIST CSF</span></div>
-  </div>
-</section>
-
-<section class="sec" id="diagnostico">
-  <div class="wrap duo">
-    <article class="offer diag">
-      <div class="diag-l">
-        <span class="eyebrow">Punto de partida</span>
-        <h2>Diagnóstico PI System</h2>
-        <p>Una foto clara y priorizada de su plataforma, para decidir dónde invertir primero.</p>
-        <div class="offer-meta"><div><b>2 sem.</b><span>de trabajo remoto</span></div><div><b>2</b><span>informes: ejecutivo y técnico</span></div></div>
-        <a class="btn" href="../contacto/?interes=Diagn%C3%B3stico%20PI%20System">Agendar diagnóstico <svg><use href="#i-arrow"/></svg></a>
-      </div>
-      <ul class="svc-list">
-        <li>Arquitectura, servidores y licenciamiento en uso</li>
-        <li>Salud de interfaces, buffers y colas</li>
-        <li>Índice de calidad del dato por PointSource</li>
-        <li>Revisión del modelo AF y de pantallas PI Vision</li>
-        <li>Plan de mejoras rápidas y hoja de ruta a 12 meses</li>
-      </ul>
-    </article>
     <div class="arch-panel">
-      <div class="arch-cap"><span>// del proceso a la decisión: la arquitectura que revisamos de punta a punta</span><b>Alcance del diagnóstico</b></div>
+      <div class="arch-cap"><span>// del proceso a la decisión: las tres capas que revisamos</span><b>Alcance del diagnóstico</b></div>
       <div class="arch">
         <div class="arch-col src">
           <h4>Fuentes OT</h4>
@@ -181,8 +152,36 @@
           <div class="node">CONNECT · Predictive <small>nube · IA</small></div>
         </div>
       </div>
-      <div class="arch-foot"><span><b>Fuentes:</b> conectividad, failover y buffering</span><span><b>Núcleo:</b> servidores, AF y calidad del dato</span><span><b>Consumo:</b> pantallas, integraciones y reportes</span></div>
+      <div class="arch-checks">
+        <div><h5>Fuentes · revisamos</h5><ul><li>Conectividad de interfaces y Connectors</li><li>Failover, buffering y colas</li><li>Inventario de PointSources</li></ul></div>
+        <div><h5>Núcleo · revisamos</h5><ul><li>Servidores, versiones y licenciamiento en uso</li><li>Modelo AF, Analytics y Event Frames</li><li>Índice de calidad del dato por PointSource</li></ul></div>
+        <div><h5>Consumo · revisamos</h5><ul><li>Pantallas PI Vision frente a ISA-101</li><li>Integraciones PI Web API y AF SDK</li><li>Reportes y usuarios activos</li></ul></div>
+      </div>
     </div>
+    <div class="diag-cta">
+      <div class="dm"><b>2 sem.</b><span>de trabajo remoto</span></div>
+      <div class="dm"><b>2</b><span>informes: ejecutivo y técnico</span></div>
+      <div class="dm"><b>12 meses</b><span>de hoja de ruta priorizada</span></div>
+      <a class="btn" href="../contacto/?interes=Diagn%C3%B3stico%20PI%20System">Agendar diagnóstico <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>Cambios en producción sin detener la planta.</h2>
+      <p>Cada cambio sigue el mismo flujo controlado, con aprobación conjunta y plan de reversa. Usted sabe qué se toca, cuándo y quién lo valida.</p>
+    </div>
+    <div class="method">
+      <div class="m-step"><code>RFC</code><h3>Solicitud de cambio</h3><p>Alcance, riesgo e impacto aprobados por su equipo y el nuestro.</p></div>
+      <div class="m-step"><code>DEV</code><h3>Desarrollo</h3><p>Trabajo por sprints con diseño de bajo nivel documentado.</p></div>
+      <div class="m-step"><code>QA</code><h3>Validación</h3><p>Checklist de pruebas y seguridad en un entorno separado.</p></div>
+      <div class="m-step"><code>PROD</code><h3>Despliegue</h3><p>Ventana acordada con operación y plan de reversa probado.</p></div>
+      <div class="m-step"><code>OPS</code><h3>Operación</h3><p>Monitoreo, incidentes con RCA y SLA reportado cada mes.</p></div>
+    </div>
+    <div class="frames"><span>Marcos de referencia</span><span class="frame">ITIL 4</span><span class="frame">COBIT 2019</span><span class="frame">PMBOK 7</span><span class="frame">ISA-101</span><span class="frame">ISO 27001</span><span class="frame">NIST CSF</span></div>
   </div>
 </section>
 </main>
