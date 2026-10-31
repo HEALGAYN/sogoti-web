@@ -58,7 +58,7 @@ git push -u origin main
 5. Cada `git push` a `main` vuelve a publicar automáticamente.
 
 ### Formulario de contacto
-- En Netlify funciona sin código adicional (Netlify Forms). Tras el primer deploy aparece en **Forms → contacto**.
+- En Netlify funciona sin código adicional (Netlify Forms). Requiere **Forms → Enable form detection** (ya activado en `sogoti.netlify.app`) y un deploy posterior; el formulario aparece en **Forms → contacto**.
 - Para recibir avisos por correo: **Site configuration → Notifications → Emails and webhooks → Form submission notifications** y ponga su correo (Gmail/Outlook sirve).
 - Si el envío falla, el formulario ofrece mandar la solicitud por WhatsApp.
 - Alternativa (por ejemplo en GitHub Pages): cree una clave en Web3Forms o un formulario en Formspree y coloque su URL en `FORM_ENDPOINT` dentro de `assets/js/main.js`.
