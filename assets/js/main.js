@@ -12,7 +12,7 @@
   // theme toggle
   document.getElementById('themeBtn').addEventListener('click',function(){
     var r=document.documentElement, n=r.getAttribute('data-theme')==='dark'?'light':'dark';
-    r.setAttribute('data-theme',n); try{localStorage.setItem('sogoti-theme',n)}catch(e){}
+    r.setAttribute('data-theme',n); try{localStorage.setItem('sogoti-theme',n)}catch(e){} if(window.__sgDraw)window.__sgDraw();
   });
 
 
@@ -56,7 +56,7 @@
   var st={view:'mina',shift:'A'}, cv=document.getElementById('trend'), ctx=cv.getContext('2d');
   var V={
     mina:{title:'Mina Tajo Norte · operación en vivo', chart:'Movimiento acumulado vs plan · kt',
-      legend:[['Real','#3cc1f0'],['Plan','#94a4b6']],
+      legend:[['Real','var(--sb-beam)'],['Plan','var(--band-muted)']],
       kpis:function(k){return [
         ['Movimiento',fmt(96.4*k,1),'kt',103*k,'del plan'],
         ['Mineral a chancado',fmt(31.2*k,1),'kt',98*k,'del plan'],
@@ -69,7 +69,7 @@
         ['CA-104 · camión 330 t','Falla neumático','bad','Mantención']]},
       foot:function(k){return ['Cumplimiento del turno · hora 10 de 12',Math.min(99,Math.round(103*k*10/12)),fmt(103*k,0)+' %']}},
     planta:{title:'Planta Concentradora · operación en vivo', chart:'Balance de aguas · m³/h',
-      legend:[['Recuperada','#3cc1f0'],['Fresca','#f3b54a']],
+      legend:[['Recuperada','var(--sb-beam)'],['Fresca','var(--sb-warn)']],
       kpis:function(k){return [
         ['Tratamiento',fmt(4820*k,0),'t/h',101*k,'del plan'],
         ['Recuperación Cu',fmt(89.4*(0.99+k*0.01),1),'%',101,'vs plan 88,5'],
@@ -102,9 +102,10 @@
     draw();
   }
   function draw(){
+    var cs=getComputedStyle(cv),gv=function(n){return cs.getPropertyValue(n).trim()},C={beam:gv('--sb-beam'),plan:gv('--band-muted'),warn:gv('--sb-warn'),grid:gv('--band-line'),ink:gv('--band-ink')};
     var dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight; if(!w)return;
     cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
-    ctx.strokeStyle='rgba(229,236,244,.08)';ctx.lineWidth=1;
+    ctx.strokeStyle=C.grid;ctx.lineWidth=1;
     for(var g=1;g<4;g++){ctx.beginPath();ctx.moveTo(0,h*g/4+.5);ctx.lineTo(w,h*g/4+.5);ctx.stroke()}
     ctx.font='10px "IBM Plex Mono", monospace';
     function line(arr,n,lo,hi,col,dash,fill){
@@ -116,17 +117,17 @@
       return [X(li),Y(arr[li])];
     }
     if(st.view==='mina'){
-      line(series.p,13,0,110,'#94a4b6',true);
-      var e=line(series.a,13,0,110,'#3cc1f0',false,'rgba(60,193,240,.25)');
-      ctx.fillStyle='#e5ecf4';ctx.fillText(fmt(series.a[series.a.length-1],1)+' kt',Math.min(e[0]+6,w-56),e[1]+3);
+      line(series.p,13,0,110,C.plan,true);
+      var e=line(series.a,13,0,110,C.beam,false,'rgba(60,193,240,.25)');
+      ctx.fillStyle=C.ink;ctx.fillText(fmt(series.a[series.a.length-1],1)+' kt',Math.min(e[0]+6,w-56),e[1]+3);
     }else{
-      line(series.r,80,400,3000,'#3cc1f0',false,'rgba(60,193,240,.22)');
-      line(series.f,80,400,3000,'#f3b54a',false);
+      line(series.r,80,400,3000,C.beam,false,'rgba(60,193,240,.22)');
+      line(series.f,80,400,3000,C.warn,false);
     }
   }
   document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){st.view=b.dataset.view;document.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});seed();render()})});
   document.querySelectorAll('[data-shift]').forEach(function(b){b.addEventListener('click',function(){st.shift=b.dataset.shift;document.querySelectorAll('[data-shift]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});seed();render()})});
-  seed();render();addEventListener('resize',draw);
+  seed();render();addEventListener('resize',draw);window.__sgDraw=draw;
   if(!reduce){setInterval(function(){
     var k=st.shift==='A'?1:.95;
     if(st.view==='mina'){var a=series.a;a[a.length-1]+=0.04*k}
