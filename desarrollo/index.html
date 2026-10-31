@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desarrollo sobre PI System · SOGOTI</title>
+<meta name="description" content="Símbolos PI Vision personalizados, aplicaciones web con PI Web API y AF SDK, reportes automáticos y control de embarques.">
+<link rel="canonical" href="https://sogoti.netlify.app/desarrollo/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SOGOTI">
+<meta property="og:title" content="Desarrollo sobre PI System · SOGOTI">
+<meta property="og:description" content="Símbolos PI Vision personalizados, aplicaciones web con PI Web API y AF SDK, reportes automáticos y control de embarques.">
+<meta property="og:url" content="https://sogoti.netlify.app/desarrollo/">
+<meta property="og:image" content="https://sogoti.netlify.app/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script>(function(){var t='light';try{t=localStorage.getItem('sogoti-theme')||'light'}catch(e){}document.documentElement.setAttribute('data-theme',t)})();</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Zm0 6v5m0 3v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3Zm-3 10 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="s-impl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="6" rx="1.5"/><rect x="3" y="15" width="18" height="6" rx="1.5"/><path d="M7 6h.01M7 18h.01M12 9v6"/></g></symbol>
+  <symbol id="s-support" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4" height="6" rx="1.2"/><rect x="17.5" y="13" width="4" height="6" rx="1.2"/><path d="M19.5 19c0 1.7-2 2.5-5.5 2.5"/></g></symbol>
+  <symbol id="s-maint" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="s-quality" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 4-7 5 5"/><circle cx="16" cy="8" r="0.6" fill="currentColor"/><path d="M3 21h18"/></g></symbol>
+  <symbol id="s-af" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="5" rx="1"/><rect x="2.5" y="16.5" width="6" height="5" rx="1"/><rect x="15.5" y="16.5" width="6" height="5" rx="1"/><path d="M12 7.5v4.5M5.5 16.5V12h13v4.5"/></g></symbol>
+  <symbol id="s-int" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v4M16 3v4M6 7h12v4a6 6 0 0 1-12 0V7Z"/><path d="M12 17v4"/></g></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="../" class="logo" aria-label="SOGOTI, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="#0a68c8"/><path d="M8 27 15 19l5 5 6-10 6 6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="14" r="3" fill="#139fda" stroke="#fff" stroke-width="1.6"/></svg><span class="logo-word">SOGOT<span>I</span></span></a>
+    <nav class="nav-links" id="navlinks" aria-label="Principal">
+      <a href="../servicios/">Servicios</a>
+      <a href="../desarrollo/" aria-current="page">Desarrollo</a>
+      <a href="../soluciones/">Datos e IA</a>
+      <a href="../casos/">Casos</a>
+      <a href="../nosotros/">Nosotros</a>
+      <a href="../contacto/">Contacto</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg></button>
+    <a class="btn btn-primary btn-sm btn-cta" href="../contacto/?interes=Diagn%C3%B3stico%20PI%20System">Agendar diagnóstico</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navlinks">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="sec page-first" id="desarrollo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Desarrollo sobre PI System</span>
+      <h1>Software a medida, construido sobre sus datos PI.</h1>
+      <p>Cuando las herramientas estándar no alcanzan, desarrollamos sobre la plataforma que usted ya tiene: símbolos, aplicaciones web y automatizaciones que leen y escriben en PI de forma gobernada.</p>
+    </div>
+    <div class="dev">
+      <div class="code">
+        <span class="ck">PI Web API · ejemplo</span>
+<pre><span class="c">// Movimiento del turno desde Asset Framework</span>
+<span class="k">GET</span> /piwebapi/streamsets/{webId}/value
+    ?nameFilter=<span class="s">Movimiento*</span>
+
+<span class="c">// respuesta</span>
+{
+  <span class="s">"Name"</span>: <span class="s">"Movimiento_Total"</span>,
+  <span class="s">"Value"</span>: <span class="n">96.4</span>,
+  <span class="s">"UnitsAbbreviation"</span>: <span class="s">"kt"</span>,
+  <span class="s">"Good"</span>: <span class="n">true</span>
+}</pre>
+        <p>Cada aplicación consume el mismo modelo AF que usa PI Vision. Un solo dato, una sola verdad.</p>
+      </div>
+      <div class="dev-cards">
+        <article class="dev-card"><div class="svc-ic"><svg><use href="#s-af"/></svg></div><h3>Símbolos PI Vision personalizados</h3><p>Extensiones en JavaScript para lo que PI Vision no trae: estado de flota, diagramas de proceso, semáforos de cumplimiento.</p><div class="chips"><span class="chip">PI Vision extensibility</span><span class="chip">JS</span></div></article>
+        <article class="dev-card"><div class="svc-ic"><svg><use href="#s-impl"/></svg></div><h3>Aplicaciones web con datos PI</h3><p>Portales y tableros para gerencia y operación, sobre PI Web API y AF SDK, con el acceso de su dominio corporativo.</p><div class="chips"><span class="chip">PI Web API</span><span class="chip">AF SDK</span><span class="chip">.NET</span></div></article>
+        <article class="dev-card"><div class="svc-ic"><svg><use href="#s-quality"/></svg></div><h3>Reportes automáticos</h3><p>Producción por turno, cumplimiento diario y cierre mensual, generados y distribuidos sin armar planillas a mano.</p><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">PI DataLink</span></div></article>
+        <article class="dev-card"><div class="svc-ic"><svg><use href="#s-int"/></svg></div><h3>Embarques y despachos</h3><p>Seguimiento de lotes, pesajes y carga de concentrado conectado a PI, con trazabilidad desde la planta hasta el puerto.</p><div class="chips"><span class="chip">Event Frames</span><span class="chip">Node-RED</span></div></article>
+      </div>
+    </div>
+    <div class="uses"><span>Casos de uso</span><span class="frame">Reporte de producción por turno</span><span class="frame">Balance metalúrgico</span><span class="frame">KPIs de flota</span><span class="frame">Control de embarques</span><span class="frame">Balance de aguas</span><span class="frame">Reportabilidad ambiental</span><span class="frame">Ingreso manual de datos</span><span class="frame">Disponibilidad de equipos</span></div>
+  </div>
+</section>
+
+<section class="sec cta-band">
+  <div class="wrap cta-in">
+    <div><h2>¿Tiene un caso que PI Vision no resuelve?</h2><p>Cuéntenos el problema. Le proponemos una solución sobre su propia plataforma PI.</p></div>
+    <div class="cta-row"><a class="btn btn-primary" href="../contacto/?interes=Desarrollo%20a%20medida%20sobre%20PI">Conversar el caso <svg><use href="#i-arrow"/></svg></a><a class="wa" href="https://wa.me/51997658881" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="../" class="logo" aria-label="SOGOTI"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="#0a68c8"/><path d="M8 27 15 19l5 5 6-10 6 6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="14" r="3" fill="#139fda" stroke="#fff" stroke-width="1.6"/></svg><span class="logo-word">SOGOT<span>I</span></span></a>
+        <p>Ingeniería de datos industriales sobre AVEVA PI System.</p>
+      </div>
+      <div><h4>Servicios</h4><ul><li><a href="../servicios/">Implementación y soporte</a></li><li><a href="../servicios/#diagnostico">Diagnóstico PI</a></li><li><a href="../desarrollo/">Desarrollo sobre PI</a></li><li><a href="../soluciones/">Datos e IA</a></li></ul></div>
+      <div><h4>Empresa</h4><ul><li><a href="../casos/">Casos</a></li><li><a href="../nosotros/">Nosotros</a></li><li><a href="../nosotros/#credenciales">Credenciales</a></li><li><a href="../contacto/">Contacto</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="https://wa.me/51997658881" target="_blank" rel="noopener">WhatsApp +51 997 658 881</a></li><li>Cajamarca, Perú</li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 SOGOTI</span></div>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
